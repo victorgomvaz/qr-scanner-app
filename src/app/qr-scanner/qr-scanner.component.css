@@ -1,0 +1,31 @@
+.scanner-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .controls {
+    margin: 20px 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .result {
+    margin-top: 20px;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  @media (max-width: 600px) {
+    #qr-reader {
+      width: 100% !important;
+    }
+  }
+  

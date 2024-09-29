@@ -1,0 +1,24 @@
+<div class="scanner-container">
+    <h1>Escáner de Código QR</h1>
+  
+    <!-- Mostrar mensaje de error si no hay cámara -->
+    <div *ngIf="cameraError" class="error">
+      <p>{{ cameraError }}</p>
+      <p>{{ cameraError }}</p>
+    </div>
+  
+    <!-- Mostrar el escáner si hay cámara y no hay error -->
+    <div *ngIf="!cameraError">
+      <div id="qr-reader" style="width: 100%; max-width: 500px; margin: 0 auto;"></div>
+  
+      <div class="controls">
+        <button *ngIf="!isScanning" (click)="startScanning()">Iniciar Escaneo</button>
+        <button *ngIf="isScanning" (click)="stopScanning()">Detener Escaneo</button>
+      </div>
+  
+      <div class="result">
+        <h2>Contenido del QR:</h2>
+        <p>{{ qrResult }}</p>
+      </div>
+    </div>
+</div>
